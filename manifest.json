@@ -1,0 +1,18 @@
+{
+    "name": "VK minimal",
+    "version": "0.01",
+    "author": "Chumak Wladimir",
+    "description": "An extension that leaves only sections on Vkontakte pages - messages, search, notifications, my page.",
+    "icons": {
+        "128": "icon-128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://vk.com/*", "*://m.vk.com/*"],
+            "js": ["contentScript.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "host_permissions": ["*://vk.com/*", "*://m.vk.com/*"],
+    "manifest_version": 3
+}
